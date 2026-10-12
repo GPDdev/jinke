@@ -1,0 +1,23 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'org.hachile.jinke'
+    testNamespace 'org.hachile.jinke.check'
+    compileSdk 35
+
+    defaultConfig {
+        applicationId 'org.hachile.jinke'
+        minSdk 26
+        targetSdk 35
+        versionCode 1
+        versionName '1.0'
+        testInstrumentationRunner 'org.hachile.jinke.StoreCheck'
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}

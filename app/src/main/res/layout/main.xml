@@ -1,0 +1,35 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root" android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:padding="20dp" android:background="@color/background">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="56dp" android:gravity="center_vertical">
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+            android:text="今刻" android:textSize="28sp" android:textStyle="bold" android:textColor="@color/ink" />
+        <Button android:id="@+id/history" android:layout_width="72dp" android:layout_height="48dp" android:text="记录" android:contentDescription="查看历史记录" android:textColor="@color/ink" style="?android:attr/borderlessButtonStyle" />
+        <Button android:id="@+id/export" android:layout_width="72dp" android:layout_height="48dp" android:text="导出" android:contentDescription="导出全部记录" android:textColor="@color/ink" style="?android:attr/borderlessButtonStyle" />
+    </LinearLayout>
+    <TextView android:id="@+id/date" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:layout_marginBottom="4dp" android:textSize="14sp" android:textColor="@color/muted" />
+    <TextView android:id="@+id/subtitle" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="12dp" android:text="这一刻，想说点什么？" android:textSize="20sp" android:textColor="@color/ink" />
+    <HorizontalScrollView android:layout_width="match_parent" android:layout_height="64dp" android:scrollbars="none" android:fillViewport="true">
+        <RadioGroup android:id="@+id/moods" android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="horizontal">
+            <RadioButton android:id="@+id/mood_none" style="@style/MoodChip" android:text="随记" />
+            <RadioButton android:id="@+id/mood_calm" style="@style/MoodChip" android:text="平静" />
+            <RadioButton android:id="@+id/mood_happy" style="@style/MoodChip" android:text="开心" />
+            <RadioButton android:id="@+id/mood_sad" style="@style/MoodChip" android:text="低落" />
+            <RadioButton android:id="@+id/mood_anxious" style="@style/MoodChip" android:text="焦虑" />
+            <RadioButton android:id="@+id/mood_tired" style="@style/MoodChip" android:text="疲惫" />
+        </RadioGroup>
+    </HorizontalScrollView>
+    <EditText android:id="@+id/editor" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1"
+        android:minHeight="80dp" android:background="@drawable/card" android:padding="18dp"
+        android:gravity="top|start" android:inputType="textCapSentences|textMultiLine"
+        android:hint="写下心情、灵感，或脑海里的一句话……" android:contentDescription="心情和想法输入框"
+        android:textSize="18sp" android:textColor="@color/ink" android:textColorHint="@color/muted"
+        android:lineSpacingExtra="5dp" android:scrollbars="vertical" android:saveEnabled="false" />
+    <TextView android:id="@+id/status" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:layout_marginBottom="6dp" android:text="草稿自动保存在本机" android:textSize="12sp" android:textColor="@color/muted" android:accessibilityLiveRegion="polite" />
+    <LinearLayout android:layout_width="match_parent" android:layout_height="56dp" android:gravity="center_vertical">
+        <Button android:id="@+id/voice" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:text="语音输入" android:textColor="@color/ink" />
+        <Space android:layout_width="10dp" android:layout_height="1dp" />
+        <Button android:id="@+id/save" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:text="保存此刻" android:backgroundTint="@color/accent" android:textColor="@color/background" />
+    </LinearLayout>
+    <TextView android:id="@+id/privacy" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:gravity="center" android:text="只在本机 · 无账号 · 无广告" android:textSize="12sp" android:textColor="@color/muted" />
+</LinearLayout>

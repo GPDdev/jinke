@@ -1,0 +1,5 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-sdk android:minSdkVersion="26" android:targetSdkVersion="35" />
+    <application android:label="今刻存储检查" />
+    <instrumentation android:name="org.hachile.jinke.StoreCheck" android:targetPackage="org.hachile.jinke" />
+</manifest>
